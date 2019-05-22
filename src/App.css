@@ -19,6 +19,43 @@
   color: white;
 }
 
+.wrapper{
+
+}
+
+.listContainer{
+  width:250px;
+  background-color: #a6c6db;
+  border-radius:5px;
+}
+
+.listElement{
+  height:60px;
+  list-style-type:none;
+}
+
+.idIcon{
+  display:inline-block;
+  float:left;
+  width:50px;
+  height:50px;
+  background-color: #bb5555;
+  border-radius:50%;
+}
+
+.idBlueIcon{
+  display:inline-block;
+  float:left;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-color: blue;
+}
+
+.msgText{
+
+}
+
 .App-link {
   color: #61dafb;
 }
