@@ -35,7 +35,7 @@ class Container extends React.Component{
 
     render(){
         return (
-            <div className="Container">
+            <div className=" wrapper Container">
                 {this.switchRender()}
             </div>
         );

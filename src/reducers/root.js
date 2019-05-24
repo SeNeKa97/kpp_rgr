@@ -1,18 +1,29 @@
 const initialState = {
     appState: 'display',
     count: 0,
+    currentInvoice: {},
     invoices:[]
 };
 
 
 
-const invoicesReducer = function(state=initialState, action){
+const invoicesReducer = function(state = initialState, action){
     let invoices = {};
     let invoice = {};
     let count = 0;
     let index = -1;
 
     switch (action.type){
+        case 'SET_APP_STATE':
+            return {
+                ...state,
+                appState: action.newState
+            };
+        case 'SET_CURRENT_INVOICE':
+            return {
+                ...state,
+                currentInvoice: action.invoice
+            };
         case 'CREATE_INVOICE':
             let created = action.invoice;
 
@@ -31,7 +42,7 @@ const invoicesReducer = function(state=initialState, action){
             };
         case 'EDIT_INVOICE':
             invoice = action.invoice;
-            let newInvoice = action.newData;
+            let newInvoice = action.newInvoice;
 
             invoices = [...state.invoices];
             index = invoices.indexOf(invoice);
@@ -39,7 +50,8 @@ const invoicesReducer = function(state=initialState, action){
             if (index !== 1) {
                 invoices.splice(index, 1, newInvoice)
             }
-
+            console.log(invoice);
+            console.log(newInvoice);
             return {
                 ...state,
                 invoices
@@ -62,10 +74,10 @@ const invoicesReducer = function(state=initialState, action){
                 invoices
             };
         case 'UPDATE_INVOICES_LIST':
-
             return {
                 ...state
             };
+
         default:
             return state;
     }

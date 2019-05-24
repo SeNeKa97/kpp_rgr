@@ -11,7 +11,9 @@ const store = createStore(
 
 store.subscribe(throttle(() => {
     saveState({
+        appState: store.getState().appState,
         count: store.getState().count,
+        currentInvoice: store.getState().currentInvoice,
         invoices: store.getState().invoices
     });
 }, 1000));

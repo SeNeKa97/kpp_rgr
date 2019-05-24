@@ -1,13 +1,190 @@
-body {
-  background-color: transparent;
+body{
+  background-image: url("beige-paper.png");
+}
+
+@font-face{
+  font-family: 'Roboto', sans-serif;
+  src:url("https://fonts.googleapis.com/css?family=Roboto");
+}
+.wrapper{
+  background-color:#fcfcfc;
+  width:70%;
+
+  margin:20px auto 0px auto;
+  border-radius:5px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size:16pt;
+  padding:20px 60px;
+}
+
+
+
+.header h1{
+  font-weight:500;
+  font-size:18pt;
+}
+.content{
+  width:100%;
+}
+.footer{
 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+hr {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#666;
+  opacity:0.5;
 }
 
-.Container {
+.message{
+  height:400px;
+  background-color:#eee;
+  border: 1px solid #5558;
+  box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.50), 0px 0px 1px 1px rgba(0,0,0,0.05), inset 0px 0px 1px 1px rgba(0,0,0,0.05);
+}
 
+#msg{
+  width:35%;
+  float:left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button, .createButton{
+  border:1px solid;
+  padding:6px 10px;
+  border-radius:4px;
+  font-family:'Roboto';
+  border-color:#CFCFCF;
+}
+
+
+.btn-primary{
+  color: #fff;
+  background-color:#337AB7;
+  border-color: #2E6DA4;}
+.btn-primary:hover{
+  background-color:#286090;
+  border-color:#204D74;}
+.btn-primary:active{
+  background-color:#204C73;
+  border-color:#173955;}
+
+
+.btn-success{
+  color: #fff;
+  background-color:#5CB85C;
+  border-color:#4CAE4C;}
+.btn-success:hover{
+  background-color:#449D44;
+  border-color:#398439;}
+.btn-success:active{
+  background-color:#398339;
+  border-color:#2C672C}
+
+
+.btn-warning{
+  color:#fff;
+  background-color:#F0AD4E;
+  border-color:#EEA236;}
+.btn-warning:hover{
+  background-color:#EC971F;
+  border-color:#D58512;}
+.btn-warning:active{
+  background-color:#D58512;
+  border-color:#AE6D0E;}
+
+.btn-danger{
+  color:#fff;
+  background-color:#D9534F;
+  border-color:#D43F3A;}
+.btn-danger:hover{
+  background-color:#C9302C;
+  border-color:#AC2925;}
+.btn-danger:active{
+  background-color:#AB2925;
+  border-color:#8A201D;}
+
+button:hover, .createButton:hover{background-color:#bbf;}
+button:focus, .createButton:focus{outline:0;}
+button:active,.createButton:active{background-color:#ddf;}
+
+#errorText{
+  color: #CC201D;
+  text-decoration: underline;
+}
+
+tr,th,td{
+  border:1px solid #aaa;
+}
+
+td{
+  overflow: auto;
+  white-space: nowrap;
+}
+
+th{
+  background-color:#eee;
+  font-weight:400;
+}
+
+table{
+  width: 99.8%;
+  border-collapse:collapse;
+  table-layout: fixed;
+  font-size: 10pt;
+}
+
+table tr {height:45px;}
+
+table .idCol{
+  width:15%;
+}
+table .dirCol{
+
+}
+.numCol{
+  width: 7%;
+}
+table .dcCol{
+
+}
+table .ddCol{
+
+}
+table .dsCol{
+
+}
+table .commentCol{
+
+}
+
+table .deleteCol{
+  width:8%;
+}
+table .editCol{
+  width:9%;
+}
+
+
+
+.container{
+
+}
+#right{
+  width:60%;
+  float:right;
+  padding:5px;
+}
+.bordered{
+  border: 1px solid #5555;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.50), 0px 0px 1px 1px rgba(0,0,0,0.04), inset 0px 0px 1px 1px rgba(0,0,0,0.04);
 }

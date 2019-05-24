@@ -1,6 +1,7 @@
 {
   "appState": "display",
   "count": 10,
+  "currentInvoice": {},
   "invoices": [
     {
       "id": "5ac1f09a60edb54701c767da",

@@ -1,13 +1,14 @@
-let fs = require("fs");
 
 export const loadState = () => {
-    let localDB = require("./db");
     try {
-        const serializedState = localDB;
+        //let localDB = require("./db");
+        //const serializedState = localDB;
+        const serializedState = localStorage.getItem('state');
         if (serializedState === null) {
             return undefined;
         }
-        return serializedState;
+        //return serializedState;
+        return JSON.parse(serializedState);
     } catch (err) {
         return undefined;
     }
@@ -16,10 +17,8 @@ export const loadState = () => {
 export const saveState = (state) => {
     try {
         const serializedState = JSON.stringify(state);
-        fs.writeFile("db.json", serializedState, 'utf8', null);
+        localStorage.setItem('state', serializedState);
     } catch {
         // ignore write errors
     }
 };
-
-export default {loadState, saveState};
